@@ -1,0 +1,1 @@
+../../../.secrets/.config/fish/functions/hikari.fish

@@ -1,0 +1,1 @@
+../../../.secrets/.config/mpv/scripts/japan7.lua

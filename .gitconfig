@@ -1,0 +1,18 @@
+[user]
+	email = git@yuru.moe
+	name = NextFire
+	signingkey = 8EE0DE3A0AC6A57E
+[core]
+	editor = code --wait
+	autocrlf = input
+[pull]
+	rebase = true
+[init]
+	defaultBranch = main
+[commit]
+	gpgSign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
