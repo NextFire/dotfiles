@@ -1,5 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export MOZ_ENABLE_WAYLAND:1
 SETUVAR __fish_initialized:3400
 SETUVAR _fish_abbr_jotta:rclone\x20mount\x20jotta\x2dcrypt\x3a\x20\x7e/rclone\x20\x2d\x2dvfs\x2dcache\x2dmode\x20full\x20\x2d\x2ddaemon
 SETUVAR _fish_abbr_mpvtct:mpv\x20\x2d\x2dvo\x3dtct\x20\x2d\x2dprofile\x3dsw\x2dfast\x20\x2d\x2dvo\x2dtct\x2dalgo\x3dplain\x20\x2d\x2dvo\x2dtct\x2d256\x3dyes\x20\x2d\x2dreally\x2dquiet
@@ -32,4 +33,3 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:cyan\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR fish_user_paths:/usr/local/opt/fzf/bin

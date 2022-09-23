@@ -10,7 +10,7 @@ dotfiles init
 dotfiles config --local status.showUntrackedFiles no
 dotfiles remote add origin git@github.com:NextFire/dotfiles.git
 dotfiles fetch
-dotfiles switch -f macos
+dotfiles switch -f linux
 
 gpg -do .secrets.tar.gz .secrets.tar.gz.gpg
 rm -rf .secrets/
