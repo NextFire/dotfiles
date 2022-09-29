@@ -253,7 +253,7 @@ exec mako
 exec /usr/lib/geoclue-2.0/demos/agent
 exec gammastep
 
-exec easyeffects --gapplication-service
+#exec easyeffects --gapplication-service
 
 exec wl-paste -t text --watch clipman store --no-persist
 
