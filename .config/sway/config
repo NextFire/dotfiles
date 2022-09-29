@@ -243,7 +243,7 @@ bindsym control+Shift+quotedbl exec grim - | wl-copy
 bindsym control+Shift+apostrophe exec grim -g "$(slurp)" - | wl-copy
 
 # https://artemis.sh/2022/09/15/stop-chrome-stealing-hotkeys-sway.html
-for_window [app_id="^msedge-.*"] shortcuts_inhibitor disable
+for_window [app_id="^chrome-.*"] shortcuts_inhibitor disable
 
 exec brightnessctl set 5%
 exec brightnessctl --device='apple::kbd_backlight' set 50%
