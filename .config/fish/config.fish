@@ -3,7 +3,7 @@ if status is-interactive
 end
 
 # abbr
-abbr -a venv 'python3 -m venv .venv'
+abbr -a venv 'python3 -m venv --upgrade-deps .venv'
 abbr -a jotta 'rclone mount jotta-crypt: ~/rclone --vfs-cache-mode full --daemon'
 abbr -a mpvtct 'mpv --vo=tct --profile=sw-fast --vo-tct-algo=plain --vo-tct-256=yes --really-quiet'
 abbr -a k kubectl

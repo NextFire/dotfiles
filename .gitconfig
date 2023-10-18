@@ -18,3 +18,4 @@
 	required = true
 [merge]
 	conflictstyle = diff3
+	ff = false
