@@ -11,9 +11,11 @@ script_version = "1"
 
 function add_fade(subtitles, selected_lines, active_line)
 	for z, i in ipairs(selected_lines) do
-		local l = subtitles[i]
-		l.text = "{\\fad(200,200)}" .. l.text
-		subtitles[i] = l
+		if not subtitles[i].comment then
+			local l = subtitles[i]
+			l.text = "{\\fad(200,200)}" .. l.text
+			subtitles[i] = l
+		end
 	end
 	aegisub.set_undo_point(script_name)
 end
