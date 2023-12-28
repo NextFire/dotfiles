@@ -19,3 +19,7 @@
 [merge]
 	conflictstyle = diff3
 	ff = false
+[push]
+	autoSetupRemote = true
+[fetch]
+	prune = true
