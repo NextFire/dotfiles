@@ -1,1 +1,3 @@
+-S res:1080,vcodec:h264,acodec:aac
 --cookies-from-browser safari
+--mark-watched
