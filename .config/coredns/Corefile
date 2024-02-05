@@ -1,0 +1,13 @@
+. tls://. {
+    bind 127.0.0.1 ::1
+    tls /usr/local/etc/coredns/localhost+2.pem /usr/local/etc/coredns/localhost+2-key.pem
+
+    rewrite name regex (.*\.)?japan7\.bde.enseeiht\.fr\.$ k8s.yuru.moe answer auto
+    forward . tls://1.1.1.1 tls://1.0.0.1 tls://2606:4700:4700::1111 tls://2606:4700:4700::1001 {
+        tls_servername cloudflare-dns.com
+    }
+    minimal
+
+    log
+    reload
+}

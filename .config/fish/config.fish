@@ -7,10 +7,10 @@ abbr -a jotta 'rclone mount jotta-crypt: ~/rclone --vfs-cache-mode writes --daem
 abbr -a sd 'rclone mount steamdeck:/run/media/mmcblk0p1 ~/rclone --vfs-cache-mode writes'
 abbr -a mpvtct 'mpv --vo=tct --profile=sw-fast --vo-tct-algo=plain --vo-tct-256=yes --really-quiet'
 abbr -a k kubectl
-abbr -a kt 'kubectl -n kubernetes-dashboard create token admin-user | pbcopy'
+abbr -a kt 'kubectl -n kubernetes-dashboard create token admin-user | pbcopy'
 abbr -a kp 'kubectl get pods -A -o wide -w'
 abbr -a kn 'kubectl get nodes -o wide -w'
-abbr -a kd 'kubectl drain --ignore-daemonsets --delete-emptydir-data' 
+abbr -a kd 'kubectl drain --ignore-daemonsets --delete-emptydir-data'
 
 set -x LANG en_US.UTF-8
 set -x EDITOR 'code --wait'
