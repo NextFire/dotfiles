@@ -3,18 +3,23 @@ if status is-interactive
 end
 
 abbr -a venv 'python3 -m venv .venv'
-abbr -a jotta 'rclone mount jotta-crypt: ~/rclone --vfs-cache-mode writes --daemon'
-abbr -a sd 'rclone mount steamdeck:/run/media/mmcblk0p1 ~/rclone --vfs-cache-mode writes'
-abbr -a mpvtct 'mpv --vo=tct --profile=sw-fast --vo-tct-algo=plain --vo-tct-256=yes --really-quiet'
+
 abbr -a k kubectl
 abbr -a kt 'kubectl -n kubernetes-dashboard create token admin-user | pbcopy'
 abbr -a kp 'kubectl get pods -A -o wide -w'
 abbr -a kn 'kubectl get nodes -o wide -w'
+abbr -a kf 'kubectl delete pod --field-selector="status.phase==Failed" -A'
 abbr -a kd 'kubectl drain --ignore-daemonsets --delete-emptydir-data'
+
+abbr -a mpvtct 'mpv --vo=tct --profile=sw-fast --vo-tct-algo=plain --vo-tct-256=yes --really-quiet'
+
+abbr -a jotta 'rclone mount jotta-crypt: ~/rclone --vfs-cache-mode writes --daemon'
+abbr -a sd 'rclone mount steamdeck:/run/media/mmcblk0p1 ~/rclone --vfs-cache-mode writes'
 
 set -x LANG en_US.UTF-8
 set -x EDITOR 'code --wait'
-#set -x JAVA_HOME (/usr/libexec/java_home)
+
 set -x GOPATH ~/.go
+#set -x JAVA_HOME (/usr/libexec/java_home)
 
 fish_add_path -aP ~/.rd/bin
