@@ -16,9 +16,6 @@ abbr -a mpvtct 'mpv --vo=tct --profile=sw-fast --vo-tct-algo=plain --vo-tct-256=
 abbr -a jotta 'rclone mount jotta-crypt: ~/rclone --vfs-cache-mode writes --daemon'
 abbr -a sd 'rclone mount steamdeck:/run/media/mmcblk0p1 ~/rclone --vfs-cache-mode writes'
 
-set -x LANG en_US.UTF-8
-set -x EDITOR 'code --wait'
-
 set -x GOPATH ~/.go
 #set -x JAVA_HOME (/usr/libexec/java_home)
 

@@ -3,23 +3,33 @@
 	name = NextFire
 	signingkey = 8EE0DE3A0AC6A57E
 [core]
-	editor = code --wait
 	autocrlf = input
-[pull]
-	rebase = true
 [init]
 	defaultBranch = main
+[fetch]
+	prune = true
+	prunetags = true
+[pull]
+	rebase = true
 [commit]
 	gpgSign = true
+[push]
+	autoSetupRemote = true
+[diff]
+    tool = code --wait --diff $LOCAL $REMOTE
+[rebase]
+	autosquash = true
+	autostash = true
+[merge]
+	tool = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+	conflictstyle = zdiff3
+	ff = false
+[rerere]
+	enabled = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[merge]
-	conflictstyle = diff3
-	ff = false
-[push]
-	autoSetupRemote = true
-[fetch]
-	prune = true
+[url "git@github.com:"]
+	insteadOf = "https://github.com/"
