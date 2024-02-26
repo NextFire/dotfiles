@@ -8,22 +8,25 @@
 	defaultBranch = main
 [fetch]
 	prune = true
-	prunetags = true
 [pull]
 	rebase = true
 [commit]
 	gpgSign = true
 [push]
 	autoSetupRemote = true
-[diff]
-    tool = code --wait --diff $LOCAL $REMOTE
 [rebase]
 	autosquash = true
 	autostash = true
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
-	tool = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+	tool = code
 	conflictstyle = zdiff3
 	ff = false
+[mergetool "code"]
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
 [rerere]
 	enabled = true
 [filter "lfs"]
