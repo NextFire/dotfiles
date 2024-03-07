@@ -5,7 +5,7 @@ end
 abbr -a venv 'python3 -m venv .venv'
 
 abbr -a k kubectl
-abbr -a kt 'kubectl -n kubernetes-dashboard create token admin-user | pbcopy'
+abbr -a kt 'kubectl -n kube-dashboard create token admin-user | pbcopy'
 abbr -a kp 'kubectl get pods -A -o wide -w'
 abbr -a kn 'kubectl get nodes -o wide -w'
 abbr -a kf 'kubectl delete pod --field-selector="status.phase==Failed" -A'

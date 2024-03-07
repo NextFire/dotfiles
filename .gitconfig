@@ -1,9 +1,13 @@
 [user]
 	email = git@yuru.moe
 	name = NextFire
-	signingkey = 8EE0DE3A0AC6A57E
+	signingkey = ~/.ssh/id_ed25519.pub
 [core]
 	autocrlf = input
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
 [init]
 	defaultBranch = main
 [fetch]
@@ -11,6 +15,8 @@
 [pull]
 	rebase = true
 [commit]
+	gpgSign = true
+[tag]
 	gpgSign = true
 [push]
 	autoSetupRemote = true
