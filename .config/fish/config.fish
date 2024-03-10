@@ -2,7 +2,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-abbr -a venv 'python3 -m venv .venv'
+abbr -a pip 'uv pip'
+abbr -a venv 'uv venv'
+abbr -a av 'source .venv/bin/activate.fish'
 
 abbr -a k kubectl
 abbr -a kt 'kubectl -n kube-dashboard create token admin-user | pbcopy'
