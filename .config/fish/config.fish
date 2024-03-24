@@ -2,14 +2,14 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-abbr -a pip 'uv pip'
-abbr -a venv 'uv venv'
-abbr -a av 'source .venv/bin/activate.fish'
+abbr -a uvp 'uv pip'
+abbr -a uvv 'uv venv'
+abbr -a activate 'source .venv/bin/activate.fish'
 
 abbr -a k kubectl
 abbr -a kt 'kubectl -n kube-dashboard create token admin-user | pbcopy'
-abbr -a kp 'kubectl get pods -A -o wide -w'
 abbr -a kn 'kubectl get nodes -o wide -w'
+abbr -a kp 'kubectl get pods -A -o wide -w'
 abbr -a kf 'kubectl delete pod --field-selector="status.phase==Failed" -A'
 abbr -a kd 'kubectl drain --ignore-daemonsets --delete-emptydir-data'
 
