@@ -21,4 +21,5 @@ abbr -a sd 'rclone mount steamdeck:/run/media/mmcblk0p1 ~/rclone --vfs-cache-mod
 set -x GOPATH ~/.go
 #set -x JAVA_HOME (/usr/libexec/java_home)
 
+fish_add_path -P ~/.local/bin ~/.krew/bin ~/.cargo/bin
 fish_add_path -aP ~/.rd/bin
