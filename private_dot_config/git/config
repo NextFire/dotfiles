@@ -1,0 +1,42 @@
+[user]
+	email = git@yuru.moe
+	name = NextFire
+	signingkey = ~/.ssh/id_ed25519.pub
+[core]
+	autocrlf = input
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.config/git/allowed_signers
+[init]
+	defaultBranch = main
+[fetch]
+	prune = true
+[pull]
+	rebase = true
+[commit]
+	gpgSign = true
+[push]
+	autoSetupRemote = true
+[rebase]
+	autosquash = true
+	autostash = true
+[diff]
+    tool = default-difftool
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = code
+	conflictstyle = zdiff3
+	ff = false
+[mergetool "code"]
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+[rerere]
+	enabled = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[url "git@github.com:"]
+	insteadOf = "https://github.com/"

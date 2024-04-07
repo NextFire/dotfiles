@@ -1,0 +1,23 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+Host *
+    AddKeysToAgent yes
+    IdentityFile ~/.ssh/id_ed25519
+
+Host camp.yuru.moe
+    User root
+
+Host nadeshiko.yuru.moe
+    User root
+
+Host steamdeck
+    HostName 10.200.0.4
+    User deck
+
+Host japan7
+    HostName sftp.japan7.bde.enseeiht.fr
+    Port 8222
+    User nextfire#0733
+
+Host polymtl
+    HostName l4712-21.info.polymtl.ca
+    User navux
