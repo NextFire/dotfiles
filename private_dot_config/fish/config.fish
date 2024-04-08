@@ -23,3 +23,6 @@ set -x GOPATH ~/.go
 
 fish_add_path -P ~/.local/bin ~/.krew/bin ~/.cargo/bin
 fish_add_path -aP ~/.rd/bin
+
+fzf --fish | source
+bind © fzf-cd-widget
