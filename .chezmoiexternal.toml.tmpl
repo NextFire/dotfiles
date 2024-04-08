@@ -1,0 +1,10 @@
+{{ if eq .chezmoi.os "darwin" }}
+[".config/git/ignore"]
+type = "file"
+url = "https://raw.githubusercontent.com/github/gitignore/main/Global/macOS.gitignore"
+{{ end }}
+
+[".config/mpv/scripts/autoload.lua"]
+type = "file"
+url = "https://raw.githubusercontent.com/mpv-player/mpv/master/TOOLS/lua/autoload.lua"
+refreshPeriod = "672h"
