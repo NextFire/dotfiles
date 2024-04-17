@@ -1,5 +1,6 @@
 # Read more about SSH config files: https://linux.die.net/man/5/ssh_config
 Host *
+    AddKeysToAgent yes
     IdentityFile ~/.ssh/id_ed25519
 
 Host camp.yuru.moe
