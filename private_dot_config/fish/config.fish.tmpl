@@ -24,6 +24,8 @@ abbr -a sd 'rclone mount steamdeck:/run/media/mmcblk0p1 ~/rclone --vfs-cache-mod
 abbr -a mpvtct 'mpv --vo=tct --profile=sw-fast --vo-tct-algo=plain --vo-tct-256=yes --really-quiet'
 
 # exports
+set -x LANG en_US.UTF-8
+set -x EDITOR vim
 set -x GOPATH ~/.go
 {{- if eq .chezmoi.os "darwin" }}
 #set -x JAVA_HOME (/usr/libexec/java_home)
