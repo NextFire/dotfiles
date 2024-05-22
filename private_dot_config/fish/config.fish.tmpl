@@ -33,7 +33,7 @@ set -x GOPATH ~/.go
 
 # $PATH
 fish_add_path -P ~/.local/bin ~/.krew/bin ~/.cargo/bin
-{{- if eq .chezmoi.os "darwin" }} /usr/local/opt/python@3.12/libexec/bin{{ end }}
+{{- if eq .chezmoi.os "darwin" }} (brew --prefix python@3.12)/bin{{ end }}
 {{- if eq .chezmoi.os "darwin" }}
 fish_add_path -aP ~/.rd/bin
 {{- end }}

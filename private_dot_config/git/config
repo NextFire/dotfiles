@@ -22,9 +22,9 @@
 	autosquash = true
 	autostash = true
 [diff]
-    tool = default-difftool
+	tool = default-difftool
 [difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+	cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
 	tool = code
 	conflictstyle = zdiff3

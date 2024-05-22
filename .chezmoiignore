@@ -6,3 +6,6 @@ Library/
 .config/pypoetry/
 .config/sops/
 {{ end }}
+{{ if ne .chezmoi.hostname "JNMQWT967R" }}
+.ssh/id_rsa*
+{{ end }}
