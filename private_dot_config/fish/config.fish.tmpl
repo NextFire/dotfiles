@@ -27,8 +27,9 @@ abbr -a mpvtct 'mpv --vo=tct --profile=sw-fast --vo-tct-algo=plain --vo-tct-256=
 set -x LANG en_US.UTF-8
 set -x EDITOR vim
 set -x GOPATH ~/.go
-{{- if eq .chezmoi.os "darwin" }}
-#set -x JAVA_HOME (/usr/libexec/java_home)
+{{- if eq .chezmoi.hostname "JNMQWT967R" }}
+set -x DOCKER_HOST unix://$HOME/.rd/docker.sock
+set -x JAVA_HOME (/usr/libexec/java_home)
 {{- end }}
 
 # $PATH
