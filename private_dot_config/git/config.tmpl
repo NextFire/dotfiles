@@ -40,3 +40,7 @@
 	required = true
 [url "git@github.com:"]
 	insteadOf = "https://github.com/"
+{{- if eq .chezmoi.hostname "JNMQWT967R" }}
+[includeIf "gitdir:~/Developer/Criteo/"]
+	path = ~/Developer/Criteo/.gitconfig
+{{- end }}
