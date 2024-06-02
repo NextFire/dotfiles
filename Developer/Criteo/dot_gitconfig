@@ -1,0 +1,4 @@
+[user]
+	email = n.vu@criteo.com
+	name = Nam Vu
+	signingkey = ~/.ssh/id_rsa.pub

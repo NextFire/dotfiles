@@ -7,5 +7,8 @@ Library/
 .config/sops/
 {{ end }}
 {{ if ne .chezmoi.hostname "JNMQWT967R" }}
+.config/fish/conf.d/config_sdk.fish
+.config/fish/functions/nvm.fish
 .ssh/id_rsa*
+Developer/Criteo/.gitconfig
 {{ end }}
