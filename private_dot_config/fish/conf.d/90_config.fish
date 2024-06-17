@@ -1,11 +1,7 @@
-if status is-interactive
-    # Commands to run in interactive sessions can go here
-end
-
 # python
 abbr -a uvp 'uv pip'
 abbr -a uvv 'uv venv'
-abbr -a activate 'source .venv/bin/activate.fish'
+abbr -a uva 'source .venv/bin/activate.fish'
 
 # kubectl
 abbr -a k kubectl
@@ -23,27 +19,5 @@ abbr -a sd 'rclone mount steamdeck:/run/media/mmcblk0p1 ~/rclone --vfs-cache-mod
 # others
 abbr -a mpvtct 'mpv --vo=tct --profile=sw-fast --vo-tct-algo=plain --vo-tct-256=yes --really-quiet'
 
-# exports
-set -x LANG en_US.UTF-8
-set -x EDITOR vim
-set -x GOPATH ~/.go
-
-# PATH
-fish_add_path -P ~/.local/bin ~/.krew/bin ~/.cargo/bin $GOPATH/bin
-{{- if eq .chezmoi.os "darwin" }} (brew --prefix python@3.12)/bin{{ end }}
-{{- if eq .chezmoi.os "darwin" }}
-fish_add_path -aP ~/.rd/bin
-{{- end }}
-
 # fzf
 fzf --fish | source
-{{- if eq .chezmoi.os "darwin" }}
-bind © fzf-cd-widget
-{{- end }}
-
-{{ if eq .chezmoi.hostname "JNMQWT967R" -}}
-# Criteo
-set -x DEVTOOL_DIR ~/devtools
-babelfish < $DEVTOOL_DIR/.criteo_init_profile | source
-set -x DOCKER_HOST unix://$HOME/.rd/docker.sock
-{{- end }}

@@ -1,13 +1,19 @@
 {{ if ne .chezmoi.os "darwin" }}
+.config/fish/conf.d/95_config_macos.fish
 Library/
+{{ if ne .chezmoi.arch "arm64" }}
+.config/fish/conf.d/10_brew.fish
 {{ end }}
+{{ end }}
+
 {{ if ne .chezmoi.os "linux" }}
 .aegisub/
 .config/pypoetry/
 .config/sops/
 {{ end }}
+
 {{ if ne .chezmoi.hostname "JNMQWT967R" }}
-.config/fish/conf.d/config_sdk.fish
+.config/fish/conf.d/30_criteo.fish
 .config/fish/functions/nvm.fish
 .ssh/id_rsa*
 Developer/Criteo/.gitconfig
