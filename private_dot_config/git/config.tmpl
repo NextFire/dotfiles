@@ -39,6 +39,8 @@
 	process = git-lfs filter-process
 	required = true
 [url "git@github.com:"]
+	insteadOf = "gh:"
+[url "git@github.com:"]
 	insteadOf = "https://github.com/"
 {{- if eq .chezmoi.hostname "JNMQWT967R" }}
 [alias]
@@ -53,6 +55,8 @@
 	ch = checkout
 	st = status
 	hard = reset --hard origin/master
+[url "ssh://n.vu@review.crto.in:29418/"]
+	insteadOf = "crto:"
 [includeIf "gitdir:~/Developer/Criteo/"]
 	path = ~/Developer/Criteo/.gitconfig
 {{- end }}
