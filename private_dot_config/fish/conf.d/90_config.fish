@@ -10,7 +10,6 @@ abbr -a kn 'kubectl get nodes -o wide -w'
 abbr -a kp 'kubectl get pods -A -o wide -w'
 abbr -a kf 'kubectl delete pod --field-selector="status.phase==Failed" -A'
 abbr -a kd 'kubectl drain --ignore-daemonsets --delete-emptydir-data'
-abbr -a ko 'kubectl -n ollama port-forward service/ollama 11434:11434'
 
 # rclone
 abbr -a jotta 'rclone mount jotta-crypt: ~/rclone --vfs-cache-mode writes --daemon'
