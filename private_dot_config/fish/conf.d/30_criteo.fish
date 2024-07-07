@@ -3,5 +3,5 @@ set -x DEVTOOL_DIR ~/devtools
 babelfish < $DEVTOOL_DIR/.criteo_init_profile | source
 set -g __sdkman_custom_dir $DEVTOOL_DIR/sdkman
 
-abbr -a cm cdt moab
+abbr -a cm 'cdt moab'
 set -x DOCKER_HOST unix://$HOME/.rd/docker.sock
