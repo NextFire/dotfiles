@@ -16,5 +16,5 @@ Library/
 .config/fish/conf.d/30_criteo.fish
 .config/fish/functions/nvm.fish
 .ssh/id_rsa*
-Developer/Criteo/.gitconfig
+Developer/Criteo/
 {{ end }}
