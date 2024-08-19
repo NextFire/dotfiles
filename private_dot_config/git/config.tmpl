@@ -23,6 +23,8 @@
 	autostash = true
 [diff]
 	tool = default-difftool
+[diff "sopsdiffer"]
+    textconv = "sops decrypt"
 [difftool "default-difftool"]
 	cmd = code --wait --diff $LOCAL $REMOTE
 [merge]
@@ -44,8 +46,8 @@
 	insteadOf = "https://github.com/"
 {{- if eq .chezmoi.hostname "JNMQWT967R" }}
 [alias]
-	review = !git push origin HEAD:refs/for/master$1
-	draft = !git push origin HEAD:refs/for/master%wip$1
+	# review = !git push origin HEAD:refs/for/master$1
+	# draft = !git push origin HEAD:refs/for/master%wip$1
 	l = log --pretty=format:\"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate --date=short
 	ll = log --pretty=format:\"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]\" --decorate --numstat
 	lll = log -u
@@ -55,6 +57,8 @@
 	ch = checkout
 	st = status
 	hard = reset --hard origin/master
+	gerrit = !mkdir -p `git rev-parse --git-dir`/hooks/ && curl -Lso `git rev-parse --git-dir`/hooks/commit-msg https://review.crto.in/tools/hooks/commit-msg && chmod +x `git rev-parse --git-dir`/hooks/commit-msg
+	review = push origin HEAD:refs/for/master
 [url "ssh://n.vu@review.crto.in:29418/"]
 	insteadOf = "crto:"
 [includeIf "gitdir:~/Developer/Criteo/"]
