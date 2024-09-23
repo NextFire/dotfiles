@@ -47,6 +47,7 @@
 [alias]
 	graph = log --all --decorate --oneline --graph
 	ca = commit --amend --no-edit --reset-author
+	cp = cherry-pick
 {{- if eq .chezmoi.hostname "JNMQWT967R" }}
 	# review = !git push origin HEAD:refs/for/master$1
 	# draft = !git push origin HEAD:refs/for/master%wip$1
