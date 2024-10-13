@@ -73,6 +73,6 @@ fish_add_path -mP $NVM_HOME
 fish_add_path -mP $NVM_SYMLINK
 ##########
 
-fish_add_path -mP $SDKMAN_DIR/candidates/*/current
+fish_add_path -mP $SDKMAN_DIR/candidates/*/current/bin
 set -x DOCKER_HOST unix://$HOME/.rd/docker.sock
 abbr -a cm 'cdt moab'
