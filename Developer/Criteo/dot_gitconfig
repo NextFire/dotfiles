@@ -18,5 +18,3 @@
 	hard = reset --hard origin/master
 	gerrit = !mkdir -p `git rev-parse --git-dir`/hooks/ && curl -Lso `git rev-parse --git-dir`/hooks/commit-msg https://review.crto.in/tools/hooks/commit-msg && chmod +x `git rev-parse --git-dir`/hooks/commit-msg
 	review = push origin HEAD:refs/for/master
-[url "ssh://n.vu@review.crto.in:29418/"]
-	insteadOf = "crto:"

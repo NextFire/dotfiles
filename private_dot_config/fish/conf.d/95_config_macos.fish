@@ -1,2 +1,2 @@
-fish_add_path -aP ~/.rd/bin
+fish_add_path -amP ~/.rd/bin
 bind © fzf-cd-widget

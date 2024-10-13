@@ -4,5 +4,5 @@ function history-backup
 {{- else if eq .chezmoi.os "linux" }}
     set localhostname (hostname)
 {{- end }}
-    rclone copyto $HOME/.local/share/fish/fish_history jotta-crypt:local_secrets/$localhostname/fish_history -P
+    rclone copyto $HOME/.local/share/fish/fish_history jotta-crypt:Documents/local_secrets/$localhostname/fish_history -P
 end
