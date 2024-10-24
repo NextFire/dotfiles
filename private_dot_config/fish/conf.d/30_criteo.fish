@@ -29,7 +29,6 @@ set -x DISTRIB_NAME macos
 set -x DISTRIB_VERSION $(sw_vers -productVersion)
 
 set -x HOME_BIN $HOME/bin
-fish_add_path -mP $HOME_BIN
 set -x DEVTOOL_BIN $DEVTOOL_DIR/bin
 fish_add_path -mP $DEVTOOL_BIN
 
@@ -46,6 +45,7 @@ set -x NUGET_PACKAGES $DEVTOOL_DIR/.nuget/packages
 set -x NUGET_PLUGINS_CACHE_PATH $DEVTOOL_DIR/.nuget/plugin-cache
 set -x DOTNET_ROOT $DEVTOOL_DIR/dotnet
 fish_add_path -mP $DOTNET_ROOT
+fish_add_path -mP ~/.dotnet/tools
 
 # Python Varables
 set -x PYTHON_CONF_DIR $HOME/.pip
@@ -54,9 +54,10 @@ set -x PYENV_ROOT $DEVTOOL_DIR/pyenv
 set -x PYENV_BIN $PYENV_ROOT/bin
 fish_add_path -mP $PYENV_BIN
 set -x PYENV_SHIMS $PYENV_ROOT/shims
-fish_add_path -mP $PYENV_SHIMS
 set -x PYENV_HOME $PYENV_ROOT
 set -x PYENV $PYENV_ROOT
+pyenv init - | source
+pyenv virtualenv-init - | source
 
 # Ruby Variables
 set -x RVM_DIR $DEVTOOL_DIR/rvm
@@ -69,10 +70,9 @@ set -x SDKMAN_DIR $DEVTOOL_DIR/sdkman
 set -x NVM_DIR $DEVTOOL_DIR/nvm
 set -x NVM_HOME $NVM_DIR
 set -x NVM_SYMLINK $NVM_HOME/nodejs
-fish_add_path -mP $NVM_HOME
-fish_add_path -mP $NVM_SYMLINK
+fish_add_path -mP $NVM_SYMLINK $NVM_HOME
 ##########
 
-[ -d $SDKMAN_DIR ] && fish_add_path -mP $SDKMAN_DIR/candidates/*/current/bin
+fish_add_path -mP $SDKMAN_DIR/candidates/*/current/bin
 set -x DOCKER_HOST unix://$HOME/.rd/docker.sock
 abbr -a cm 'cdt moab'
